@@ -1,0 +1,45 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Aug 12 11:36:23 2020
+
+@author: nitolapio
+"""
+import cv2
+
+
+# De esta manera importamos las fotos
+'''
+img = cv2.imread("/home/nitolapio/Escritorio/Programación/Machine Learning/OpenCV/Resources/lena.jpeg")
+
+cv2.imshow("Output", img)  #NOmbre de ventana y la image
+cv2.waitKey(0)   # Con el 0 esperamos hasta que queramos. Esto es un delay 
+'''
+
+# De esta manera importamos los vídeos  ¿No funciona del todo bien
+'''
+cap = cv2.VideoCapture("/home/nitolapio/Escritorio/Programación/Machine Learning/OpenCV/Resources/test_video.mp4")
+
+while True:
+    success, img = cap.read()  #Sucess es un booleano que define si se ha leído correctamente e img es la variable donde la guardamos
+    cv2.imshow("Video", img)
+    
+    if cv2.waitKey(1) & 0XFF == ord('q'):
+        break
+'''   
+
+#Esto es para usar la webcam
+cap = cv2.VideoCapture(0)  # Con el 0 indicamos que queremos la webcam
+cap.set(3, 640)
+cap.set(4, 480)
+cap.set(10, 100) # For brightness
+
+while (cap.isOpened()):
+    ret, frame = cap.read()
+    if ret:
+        cv2.imshow('frame',frame)
+    key = cv2.waitKey(25)
+    if key == ord('n') or key == ord('p'):
+        break
+cv2.destroyAllWindows()
+
