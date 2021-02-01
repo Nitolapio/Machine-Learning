@@ -2,7 +2,7 @@ import cv2
 import matplotlib.pyplot as plt
 import numpy as np
 
-cap = cv2.VideoCapture("/home/nitolapio/Escritorio/Programación/Machine Learning/OpenCV/Resources/test2.mp4")
+cap = cv2.VideoCapture(r"C:\Users\alexa\Desktop\Programación\Machine-Learning\OpenCV\Resources\test2.mp4")
 
 # Con los siguientes dos métodos vamos a optimizar la detección de lineas (Crear un average de las líneas detectadas)
 def makeCoordinates(img, lineParameters):
@@ -102,7 +102,7 @@ while (cap.isOpened()):
     lineImage = display_lines(frame, lines)  
     comboImage = cv2.addWeighted(frame, 0.8, lineImage, 1, 1)  # Con esto unimos las líneas a la imagen
     comboImageOptimized = cv2.addWeighted(frame, 0.8, lineImageOptimized, 1, 1)
-    stack = stackImages(0.35, [[imgCanny, regionOfInterest(imgCanny), lineImage, comboImage], 
+    stack = stackImages(0.28, [[imgCanny, regionOfInterest(imgCanny), lineImage, comboImage], 
                             [imgCanny, regionOfInterest(imgCanny), lineImageOptimized, comboImageOptimized]])
 
     if ret:
@@ -110,3 +110,4 @@ while (cap.isOpened()):
     key = cv2.waitKey(25)  #it can also be another waitkey. It returns a 32 bit integer value, which we can compare to a numeric coding that we get with 'ord()'
     if key == ord('n') or key == ord('p'):
         break
+

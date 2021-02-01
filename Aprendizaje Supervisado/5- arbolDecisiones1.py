@@ -76,9 +76,9 @@ for pairidx, pair in enumerate([[0,1], [0,2], [0,3], [1,2], [1,3], [2,3]]):
 
     plt.axis("tight")    
     
-plt.subtitle("Ejemplos de clasificador de arboles")
 plt.legend()
 plt.show()
+
     
     
     

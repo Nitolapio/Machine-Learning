@@ -8,10 +8,10 @@ Created on Wed Aug 12 12:40:05 2020
 from cv2 import cv2
 import numpy as np
 
-img = cv2.imread("/home/nitolapio/Escritorio/Programación/Machine Learning/OpenCV/Resources/lena.jpeg")
+img = cv2.imread(r"C:\Users\alexa\Desktop\Programación\Machine-Learning\OpenCV\Resources\lena.jpeg")
 kernel = np.ones((2,2), np.uint8)
 
-imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)  # Para convertir la imagen a blanco y negro
+imgGray = cv2.cvtColor(img, cv2.COLOR_BAYER_BG2GRAY)  # Para convertir la imagen a blanco y negro
 imgBlur = cv2.GaussianBlur(imgGray, (7,7),0)    # BLur Gaussiano
 imgCanny = cv2.Canny(img, 100, 100) # Para detectar los bordes
 imgDialation = cv2.dilate(imgCanny, kernel, iterations=None)  # Para poder ver todos los bordes que antes no se podían ver
