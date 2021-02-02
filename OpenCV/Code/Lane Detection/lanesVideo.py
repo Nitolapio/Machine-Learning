@@ -2,7 +2,7 @@ import cv2
 import matplotlib.pyplot as plt
 import numpy as np
 
-cap = cv2.VideoCapture(r"C:\Users\alexa\Desktop\Programación\Machine-Learning\OpenCV\Resources\test2.mp4")
+cap = cv2.VideoCapture("/home/nitolapio/Desktop/Programación/Machine-Learning/OpenCV/Resources/test2.mp4")
 
 # Con los siguientes dos métodos vamos a optimizar la detección de lineas (Crear un average de las líneas detectadas)
 def makeCoordinates(img, lineParameters):

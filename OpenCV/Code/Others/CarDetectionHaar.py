@@ -3,8 +3,8 @@ import cv2
 ### This method is not quite good; it's old
 
 # cap = cv2.VideoCapture("/home/nitolapio/Escritorio/Programación/Machine Learning/OpenCV/Resources/Vehicle-And-Pedestrian-Detection-Using-Haar-Cascades/Main Project/Main Project/Car Detection/video1.avi")
-carCascade = cv2.CascadeClassifier("/home/nitolapio/Escritorio/Programación/Machine Learning/OpenCV/Resources/vehicle_detection_haarcascades/cars.xml")
-cap = cv2.VideoCapture("/home/nitolapio/Escritorio/Programación/Machine Learning/OpenCV/Resources/test_video.mp4")
+carCascade = cv2.CascadeClassifier("/home/nitolapio/Desktop/Programación/Machine Learning/OpenCV/Resources/vehicle_detection_haarcascades/cars.xml")
+cap = cv2.VideoCapture("/home/nitolapio/Desktop/Programación/Machine-Learning/OpenCV/Resources/test_video.mp4")
 
 
 while True:
